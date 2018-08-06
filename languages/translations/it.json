@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Prendi il traghetto",
-                "name": "Prendi il traghetto {way_name}",
-                "destination": "Prendi il traghetto verso {destination}"
+                "default": {
+                    "default": "Prendi il traghetto",
+                    "name": "Prendi il traghetto {way_name}",
+                    "destination": "Prendi il traghetto verso {destination}"
+                }
             }
         },
         "phrase": {

@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Скористайтесь поромом",
-                "name": "Скористайтесь поромом {way_name}",
-                "destination": "Скористайтесь поромом у напрямку {destination}"
+                "default": {
+                    "default": "Скористайтесь поромом",
+                    "name": "Скористайтесь поромом {way_name}",
+                    "destination": "Скористайтесь поромом у напрямку {destination}"
+                }
             }
         },
         "phrase": {

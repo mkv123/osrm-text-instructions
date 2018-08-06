@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Coge el ferry",
-                "name": "Coge el ferry {way_name}",
-                "destination": "Coge el ferry hacia {destination}"
+                "default": {
+                    "default": "Coge el ferry",
+                    "name": "Coge el ferry {way_name}",
+                    "destination": "Coge el ferry hacia {destination}"
+                }
             }
         },
         "phrase": {

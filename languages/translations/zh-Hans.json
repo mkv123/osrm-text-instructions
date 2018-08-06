@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "乘坐轮渡",
-                "name": "乘坐{way_name}轮渡",
-                "destination": "乘坐开往{destination}的轮渡"
+                "default": {
+                    "default": "乘坐轮渡",
+                    "name": "乘坐{way_name}轮渡",
+                    "destination": "乘坐开往{destination}的轮渡"
+                }
             }
         },
         "phrase": {

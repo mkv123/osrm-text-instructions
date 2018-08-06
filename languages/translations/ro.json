@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Luați feribotul",
-                "name": "Luați feribotul {way_name}",
-                "destination": "Luați feribotul spre {destination}"
+                "default": {
+                    "default": "Luați feribotul",
+                    "name": "Luați feribotul {way_name}",
+                    "destination": "Luați feribotul spre {destination}"
+                }
             }
         },
         "phrase": {

@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Lên phà",
-                "name": "Lên phà {way_name}",
-                "destination": "Lên phà đi {destination}"
+                "default": {
+                    "default": "Lên phà",
+                    "name": "Lên phà {way_name}",
+                    "destination": "Lên phà đi {destination}"
+                }
             }
         },
         "phrase": {

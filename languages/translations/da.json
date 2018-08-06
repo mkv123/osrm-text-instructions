@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Tag færgen",
-                "name": "Tag færgen {way_name}",
-                "destination": "Tag færgen i retning {destination}"
+                "default": {
+                    "default": "Tag færgen",
+                    "name": "Tag færgen {way_name}",
+                    "destination": "Tag færgen i retning {destination}"
+                }
             }
         },
         "phrase": {

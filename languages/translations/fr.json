@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Prendre le ferry",
-                "name": "Prendre le ferry {way_name:article}",
-                "destination": "Prendre le ferry en direction {destination:preposition}"
+                "default": {
+                    "default": "Prendre le ferry",
+                    "name": "Prendre le ferry {way_name:article}",
+                    "destination": "Prendre le ferry en direction {destination:preposition}"
+                }
             }
         },
         "phrase": {

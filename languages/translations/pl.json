@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Weź prom",
-                "name": "Weź prom {way_name}",
-                "destination": "Weź prom w kierunku {destination}"
+                "default": {
+                    "default": "Weź prom",
+                    "name": "Weź prom {way_name}",
+                    "destination": "Weź prom w kierunku {destination}"
+                }
             }
         },
         "phrase": {

@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Pegue a balsa",
-                "name": "Pegue a balsa {way_name}",
-                "destination": "Pegue a balsa sentido {destination}"
+                "default": {
+                    "default": "Pegue a balsa",
+                    "name": "Pegue a balsa {way_name}",
+                    "destination": "Pegue a balsa sentido {destination}"
+                }
             }
         },
         "phrase": {

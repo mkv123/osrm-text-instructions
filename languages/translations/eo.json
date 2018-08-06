@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Enpramiĝu",
-                "name": "Enpramiĝu {way_name}",
-                "destination": "Enpramiĝu direkte al {destination}"
+                "default": {
+                    "default": "Enpramiĝu",
+                    "name": "Enpramiĝu {way_name}",
+                    "destination": "Enpramiĝu direkte al {destination}"
+                }
             }
         },
         "phrase": {

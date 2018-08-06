@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Apanhe o ferry",
-                "name": "Apanhe o ferry {way_name}",
-                "destination": "Apanhe o ferry para {destination}"
+                "default": {
+                    "default": "Apanhe o ferry",
+                    "name": "Apanhe o ferry {way_name}",
+                    "destination": "Apanhe o ferry para {destination}"
+                }
             }
         },
         "phrase": {

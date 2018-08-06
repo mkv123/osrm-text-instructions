@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "ဖယ္ရီ စီးသြားပါ",
-                "name": "{way_name}ကို ဖယ္ရီစီးသြားပါ",
-                "destination": "{destination}ဆီသို႕ ဖယ္ရီစီးသြားပါ"
+                "default": {
+                    "default": "ဖယ္ရီ စီးသြားပါ",
+                    "name": "{way_name}ကို ဖယ္ရီစီးသြားပါ",
+                    "destination": "{destination}ဆီသို႕ ဖယ္ရီစီးသြားပါ"
+                }
             }
         },
         "phrase": {

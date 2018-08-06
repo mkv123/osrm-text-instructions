@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Take the ferry",
-                "name": "Take the ferry {way_name}",
-                "destination": "Take the ferry towards {destination}"
+                "default": {
+                    "default": "Take the ferry",
+                    "name": "Take the ferry {way_name}",
+                    "destination": "Take the ferry towards {destination}"   
+                }
             }
         },
         "phrase": {

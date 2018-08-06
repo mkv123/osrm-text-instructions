@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Naik ferry",
-                "name": "Naik ferry di {way_name}",
-                "destination": "Naik ferry menuju {destination}"
+                "default": {
+                    "default": "Naik ferry",
+                    "name": "Naik ferry di {way_name}",
+                    "destination": "Naik ferry menuju {destination}"
+                }
             }
         },
         "phrase": {

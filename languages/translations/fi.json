@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Aja lautalle",
-                "name": "Aja lautalle {way_name}",
-                "destination": "Aja lautalle, jonka määränpää on {destination}"
+                "default": {
+                    "default": "Aja lautalle",
+                    "name": "Aja lautalle {way_name}",
+                    "destination": "Aja lautalle, jonka määränpää on {destination}"
+                }
             }
         },
         "phrase": {

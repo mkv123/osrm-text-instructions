@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Fähre nehmen",
-                "name": "Fähre nehmen {way_name}",
-                "destination": "Fähre nehmen Richtung {destination}"
+                "default": {
+                    "default": "Fähre nehmen",
+                    "name": "Fähre nehmen {way_name}",
+                    "destination": "Fähre nehmen Richtung {destination}"
+                }
             }
         },
         "phrase": {

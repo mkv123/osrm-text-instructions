@@ -106,6 +106,33 @@ module.exports = function(version) {
 
             return wayName;
         },
+        getManeuverInstuction: function(language, mode, type, modifier) {
+            var instructionObject;
+            if (mode) {
+                console.log('Mode: ' + mode); // eslint-disable-line no-console
+            }
+
+            // Use mode specific instructions, if such exist
+            if (instructions[language][version].modes[mode] && instructions[language][version].modes[mode][type] && instructions[language][version].modes[mode][type][modifier]) {
+                // Perfect match with modifier for this mode
+                instructionObject = instructions[language][version].modes[mode][type][modifier];
+            } else if (instructions[language][version].modes[mode] && !instructions[language][version].modes[mode][type] && instructions[language][version].modes[mode].default) {
+                // No match with type, but default for this mode exists (i.e. ferry)
+                instructionObject = instructions[language][version].modes[mode].default;
+            } else if (instructions[language][version][type]) {
+                // Fallback to non-mode specific instruction as that exists.
+                instructionObject = instructions[language][version][type][modifier];
+            } else {
+                // Log for debugging
+                console.log('Encountered unknown instruction type: ' + type); // eslint-disable-line no-console
+                // OSRM specification assumes turn types can be added without
+                // major version changes. Unknown types are to be treated as
+                // type `turn` by clients
+                instructionObject = instructions[language][version].turn[modifier];
+            }
+
+            return instructionObject;
+        },
 
         /**
          * Formulate a localized text instruction from a step.
@@ -135,29 +162,16 @@ module.exports = function(version) {
             if (!type) { throw new Error('Missing step maneuver type'); }
             if (type !== 'depart' && type !== 'arrive' && !modifier) { throw new Error('Missing step maneuver modifier'); }
 
-            if (!instructions[language][version][type]) {
-                // Log for debugging
-                console.log('Encountered unknown instruction type: ' + type); // eslint-disable-line no-console
-                // OSRM specification assumes turn types can be added without
-                // major version changes. Unknown types are to be treated as
-                // type `turn` by clients
-                type = 'turn';
-            }
-
             // Use special instructions if available, otherwise `defaultinstruction`
             var instructionObject;
-            if (instructions[language][version].modes[mode]) {
-                instructionObject = instructions[language][version].modes[mode];
+            // omit side from off ramp if same as driving_side
+            // note: side will be undefined if the input is from OSRM <5.14
+            // but the condition should still evaluate properly regardless
+            var omitSide = type === 'off ramp' && modifier.indexOf(side) >= 0;
+            if (!omitSide && this.getManeuverInstuction(language, mode, type, modifier)) {
+                instructionObject = this.getManeuverInstuction(language, mode, type, modifier);
             } else {
-              // omit side from off ramp if same as driving_side
-              // note: side will be undefined if the input is from OSRM <5.14
-              // but the condition should still evaluate properly regardless
-                var omitSide = type === 'off ramp' && modifier.indexOf(side) >= 0;
-                if (instructions[language][version][type][modifier] && !omitSide) {
-                    instructionObject = instructions[language][version][type][modifier];
-                } else {
-                    instructionObject = instructions[language][version][type].default;
-                }
+                instructionObject = this.getManeuverInstuction(language, mode, type, 'default');
             }
 
             // Special case handling
@@ -167,7 +181,7 @@ module.exports = function(version) {
                 laneInstruction = instructions[language][version].constants.lanes[this.laneConfig(step)];
                 if (!laneInstruction) {
                     // If the lane combination is not found, default to continue straight
-                    instructionObject = instructions[language][version]['use lane'].no_lanes;
+                    instructionObject = this.getManeuverInstuction(language, mode, 'use lane', 'no_lanes');
                 }
                 break;
             case 'rotary':
@@ -256,6 +270,8 @@ module.exports = function(version) {
             return name;
         },
         abbreviations: abbreviations,
+
+        // Takes the instruction and replaces any tokens in it such as {way_name} with their actual value.
         tokenize: function(language, instruction, tokens, options) {
             if (!language) throw new Error('No language code provided');
             // Keep this function context to use in inline function below (no arrow functions in ES4)

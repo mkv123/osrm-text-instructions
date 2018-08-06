@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Погрузитесь на паром",
-                "name": "Погрузитесь на паром {way_name}",
-                "destination": "Погрузитесь на паром в направлении {destination}"
+                "default": {
+                    "default": "Погрузитесь на паром",
+                    "name": "Погрузитесь на паром {way_name}",
+                    "destination": "Погрузитесь на паром в направлении {destination}"
+                }
             }
         },
         "phrase": {

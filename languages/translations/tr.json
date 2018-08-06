@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Vapur kullan",
-                "name": "{way_name} vapurunu kullan",
-                "destination": "{destination} istikametine giden vapuru kullan"
+                "default": {
+                    "default": "Vapur kullan",
+                    "name": "{way_name} vapurunu kullan",
+                    "destination": "{destination} istikametine giden vapuru kullan"
+                }
             }
         },
         "phrase": {

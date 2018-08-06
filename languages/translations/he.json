@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "עלה על המעבורת",
-                "name": "עלה על המעבורת {way_name}",
-                "destination": "עלה על המעבורת לכיוון {destination}"
+                "default": {
+                    "default": "עלה על המעבורת",
+                    "name": "עלה על המעבורת {way_name}",
+                    "destination": "עלה על המעבורת לכיוון {destination}"
+                }
             }
         },
         "phrase": {

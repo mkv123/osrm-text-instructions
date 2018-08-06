@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "페리를 타시오",
-                "name": "페리를 타시오 {way_name}",
-                "destination": "페리를 타고 {destination}까지 가세요."
+                "default": {
+                    "default": "페리를 타시오",
+                    "name": "페리를 타시오 {way_name}",
+                    "destination": "페리를 타고 {destination}까지 가세요."
+                }
             }
         },
         "phrase": {

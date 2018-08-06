@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Ta färjan",
-                "name": "Ta färjan på {way_name}",
-                "destination": "Ta färjan mot {destination}"
+                "default": {
+                    "default": "Ta färjan",
+                    "name": "Ta färjan på {way_name}",
+                    "destination": "Ta färjan mot {destination}"
+                }
             }
         },
         "phrase": {

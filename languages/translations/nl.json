@@ -45,9 +45,11 @@
         },
         "modes": {
             "ferry": {
-                "default": "Neem de veerpont",
-                "name": "Neem de veerpont {way_name}",
-                "destination": "Neem de veerpont naar {destination}"
+                "default": {
+                    "default": "Neem de veerpont",
+                    "name": "Neem de veerpont {way_name}",
+                    "destination": "Neem de veerpont naar {destination}"
+                }
             }
         },
         "phrase": {
