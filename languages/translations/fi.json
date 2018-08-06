@@ -50,6 +50,15 @@
                     "name": "Aja lautalle {way_name}",
                     "destination": "Aja lautalle, jonka määränpää on {destination}"
                 }
+            },
+            "walking": {
+                "depart": {
+                    "default": {
+                        "default": "Kävele {direction}",
+                        "name": "Kävele tietä {way_name} {direction}",
+                        "namedistance": "Kävele {distance} {direction} tietä {way_name} "
+                    }
+                }
             }
         },
         "phrase": {
