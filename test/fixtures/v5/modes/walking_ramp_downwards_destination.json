@@ -1,0 +1,16 @@
+{
+    "step": {
+        "maneuver": {
+            "type": "ramp",
+            "modifier": "downwards"
+        },
+        "mode": "walking",
+        "name": "Way Name",
+        "destinations": "Destination 1,Destination 2"
+    },
+    "instructions": {
+        "en": "Take the ramp to Destination 1",
+        "fi": "Mene luiskaa pitkin kerrokseen Destination 1",
+        "sv": "Ta rampen ner till våning Destination 1"
+    }
+}

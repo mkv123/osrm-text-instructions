@@ -1,0 +1,16 @@
+{
+    "step": {
+        "maneuver": {
+            "type": "escalator",
+            "modifier": "upwards"
+        },
+        "mode": "walking",
+        "name": "Way Name",
+        "destinations": "Destination 1,Destination 2"
+    },
+    "instructions": {
+        "en": "Take the escalator to Destination 1",
+        "fi": "Mene liukuportaita kerrokseen Destination 1",
+        "sv": "Ta rulltrapporna till våning Destination 1"
+    }
+}

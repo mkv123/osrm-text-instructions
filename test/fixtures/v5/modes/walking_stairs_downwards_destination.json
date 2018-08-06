@@ -1,0 +1,16 @@
+{
+    "step": {
+        "maneuver": {
+            "type": "stairs",
+            "modifier": "downwards"
+        },
+        "mode": "walking",
+        "name": "Way Name",
+        "destinations": "Destination 1,Destination 2"
+    },
+    "instructions": {
+        "en": "Take the stairs to Destination 1",
+        "fi": "Kulje portaat alas kerrokseen Destination 1",
+        "sv": "Ta trapporna till våning Destination 1"
+    }
+}

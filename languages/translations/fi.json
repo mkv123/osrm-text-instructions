@@ -27,8 +27,8 @@
                 "northwest": "luoteeseen"
             },
             "modifier": {
-                "left": "vasemmall(e/a)",
-                "right": "oikeall(e/a)",
+                "left": "vasemmalle",
+                "right": "oikealle",
                 "sharp left": "jyrkästi vasempaan",
                 "sharp right": "jyrkästi oikeaan",
                 "slight left": "loivasti vasempaan",
@@ -186,6 +186,16 @@
                 "default": "Jatka tienhaarassa {modifier}",
                 "name": "Jatka {modifier} tielle {way_name}",
                 "destination": "Jatka {modifier} suuntana {destination}"
+            },
+            "left": {
+                "default": "Jatka tienhaarassa vasemmalla",
+                "name": "Jatka vasemmalla tielle {way_name}",
+                "destination": "Jatka vasemmalla suuntana {destination}"
+            },
+            "right": {
+                "default": "Jatka tienhaarassa oikealla",
+                "name": "Jatka oikealla tielle {way_name}",
+                "destination": "Jatka oikealla suuntana {destination}"
             },
             "slight left": {
                 "default": "Pysy vasemmalla tienhaarassa",

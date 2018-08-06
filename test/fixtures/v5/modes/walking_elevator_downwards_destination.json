@@ -1,0 +1,16 @@
+{
+    "step": {
+        "maneuver": {
+            "type": "elevator",
+            "modifier": "downwards"
+        },
+        "mode": "walking",
+        "name": "Way Name",
+        "destinations": "Destination 1,Destination 2"
+    },
+    "instructions": {
+        "en": "Take the elevator to Destination 1",
+        "fi": "Mene hissillä kerrokseen Destination 1",
+        "sv": "Ta hissen ner till våning Destination 1"
+    }
+}
